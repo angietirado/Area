@@ -1,0 +1,52 @@
+/**
+ *
+ * @author Angie T
+ */
+import java.util.Scanner;
+public class AreaClass {
+
+    public static void main(String[] args) {
+        
+        Scanner userInput = new Scanner(System.in);
+                        
+        System.out.println("Would you like to calculate the area of a Circle? Yes/No");
+        String answer = userInput.nextLine();
+        
+        if(answer.equalsIgnoreCase("Yes")){
+            System.out.println("Enter the circle's radius: ");
+            double radius = userInput.nextDouble();
+            
+            System.out.println(Area.getArea(radius));            
+        }
+        else if(answer.equalsIgnoreCase("No")){
+            String answer2 = userInput.nextLine();
+            System.out.println("Would you like to calculate the area of a rectangle? Yes/No");
+            if(answer2.equalsIgnoreCase("Yes")){
+                int length = userInput.nextInt();
+                System.out.println("Enter the length of the rectangle");
+                
+                int width = userInput.nextInt();
+                System.out.println("Enter the width of the rectangle");
+                
+                System.out.println(Area.getArea(length, width));
+                
+            }
+            else if(answer2.equalsIgnoreCase("No")){
+                System.out.println("Would you like to calcualte the area of the cylinder? Yes/No");
+                String answer3 = userInput.nextLine();
+                if(answer3.equalsIgnoreCase("Yes")){
+                    System.out.println("Enter the radius of the cylinder");
+                    double radius = userInput.nextDouble();
+                    
+                    System.out.println("Enter the height of the cylinder");
+                    double height = userInput.nextDouble();
+                    
+                    System.out.println(Area.getArea(radius, height));
+                    
+                }
+            }
+        }
+                
+        
+    }
+}
