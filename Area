@@ -1,0 +1,19 @@
+/**
+ *
+ * @author Angie T
+ */
+public class Area {
+        
+    public static double getArea(double radius){
+        return (Math.PI * Math.sqrt(radius));
+    }
+    
+    public static int getArea(int length, int width){
+        return (width * length);
+    }
+    
+    public static double getArea(double radius, double height){
+        return (Math.PI * Math.sqrt(radius) * height);
+    }
+   
+}
